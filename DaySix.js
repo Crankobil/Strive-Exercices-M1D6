@@ -47,6 +47,7 @@ console.log(me)
 /* Ex.F 
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
+
 me.myProgLang = ['HTML', 'CSS', 'Javascript'];
 console.log(me)
 /* Ex.G 
@@ -106,7 +107,17 @@ onlyLetters ('445Big352')
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
-
+const isThisAnEmail = (emailInput) => {
+    function ValidateEmail(mail) 
+    {
+     if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailInput))
+      {
+        return (true)
+      }
+        return (false)
+    }
+}
+console.log(isThisAnEmail('crankobil@gmail.com'))
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
@@ -128,14 +139,39 @@ whatDayIsIt ()
         values: [3, 3, 4]
     }
 */
+const rollTheDices = (numReceived) => {
+    for (let i = 0; i < numReceived; i++){
+        let rollOfDiceResult = dice()
+        let values = []
+        values.push(rollOfDiceResult)
+        console.log(values)
+
+    } 
+    }
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
+const howManyDays = (start, end) => {
+ const date1 = new Date(start);
+ const date2 = new Date(end);
+ const oneDay = 1000 * 60 * 60 * 24;
+ const diffInTime = date2.getTime() - date1.getTime();
+ const differenceinDays = Math.round(diffInTime / oneDay );
+
+ return differenceinDays;
+}
+console.log(howManyDays('2/1/2021', '3/1/2021'))
+
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
+const isTodayMyBirthday = () => {
+let today = new Date();
+
+}
+
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
@@ -207,7 +243,7 @@ whatDayIsIt ()
 */
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
-const movies = [
+/*const movies = [
     {
       Title: "The Lord of the Rings: The Fellowship of the Ring",
       Year: "2001",
