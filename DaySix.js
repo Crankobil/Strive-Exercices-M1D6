@@ -167,11 +167,12 @@ console.log(howManyDays('2/1/2021', '3/1/2021'))
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
-const isTodayMyBirthday = () => {
-let today = new Date();
-
+const isTodayMyBirthday = (birthDay) => {
+    let today = new Date();
+return birthDay.getDate() === today.getDate() &&
+birthDay.getMonth () === today.getMonth ()
 }
-
+console.log(isTodayMyBirthday(03/08/1986))
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
