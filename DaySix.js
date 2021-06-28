@@ -16,6 +16,7 @@
    Create a variable called "test" and assign a string to it.
 */
 let test = 'string'
+console.log(test)
 
 /* Ex.B
     Create a variable called "sum" and assign to it the result of the sum between 10 and 20.
@@ -73,7 +74,11 @@ whoIsBigger(10,204)
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
-
+const splitMe = (stringReceived) => {
+    let arr = stringReceived.split(' ');
+console.log(arr)
+}
+splitMe('let us try this one')
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
