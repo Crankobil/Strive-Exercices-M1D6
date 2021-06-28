@@ -110,7 +110,14 @@ onlyLetters ('445Big352')
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
-
+const whatDayIsIt = () => {
+    const arrayOfWeekdays = ['Sunday' ,'Monday' , 'Tuesday', 'Wednesday', 'Friday', 'Saturday']
+    const dateToday = new Date();
+    const weekDayNumber = dateToday.getDay();
+    const weekDayName = arrayOfWeekdays[weekDayNumber];
+    console.log(weekDayName)
+}
+whatDayIsIt ()
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
